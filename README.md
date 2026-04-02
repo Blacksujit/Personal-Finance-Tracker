@@ -31,15 +31,16 @@ A full-stack personal finance tracking application with React frontend and FastA
 
 ## Prerequisites
 
-- Node.js 16+ and npm
-- Python 3.8+
-- pip (Python package manager)
+- Node.js 18+ and npm
+- Python 3.11+ (tested)
+- Git
+- (Optional) SQLite browser if you want to inspect the local DB
 
 ## Setup Instructions
 
 ### 1. Clone and Navigate
 ```bash
-git clone <repository-url>
+git clone https://github.com/Blacksujit/Personal-Finance-Tracker.git
 cd Personal-Finance-Tracker
 ```
 
@@ -61,17 +62,30 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Set environment variable for JWT secret
-# On Windows:
-set JWT_SECRET=your-super-secret-jwt-key-here
-# On macOS/Linux:
-export JWT_SECRET=your-super-secret-jwt-key-here
-
 # Start the backend server
 python main.py
 ```
 
-The backend will start on `http://localhost:8000`
+The backend will start on:
+
+- `http://localhost:8003`
+- API base URL used by the frontend: `http://localhost:8003/api`
+
+#### Backend Environment Variables
+
+The backend will run without env vars, but for a real setup you should set:
+
+- `JWT_SECRET` (recommended): used to sign JWTs
+
+Windows (PowerShell):
+```powershell
+$env:JWT_SECRET="replace-with-a-long-random-string"
+```
+
+macOS/Linux (bash/zsh):
+```bash
+export JWT_SECRET="replace-with-a-long-random-string"
+```
 
 ### 3. Frontend Setup
 
@@ -88,6 +102,17 @@ npm run dev
 
 The frontend will start on `http://localhost:5173`
 
+#### Frontend Environment Variables
+
+The frontend reads the API base URL from `VITE_API_URL`.
+
+- If `VITE_API_URL` is not set, it defaults to `http://localhost:8003/api`.
+
+To override locally, create `frontend/.env.local`:
+```bash
+VITE_API_URL=http://localhost:8003/api
+```
+
 ## Database Setup
 
 The SQLite database is created automatically when you start the backend server. No manual database setup is required.
@@ -96,7 +121,7 @@ The SQLite database is created automatically when you start the backend server. 
 
 Required environment variable for the backend:
 
-- `JWT_SECRET`: Secret key for JWT token signing (set this to a secure random string)
+- `JWT_SECRET`: Secret key for JWT token signing (recommended to set a secure random string)
 
 Example:
 ```bash
@@ -120,6 +145,11 @@ export JWT_SECRET=my-super-secret-key-12345
    ```
 
 3. Open your browser and navigate to `http://localhost:5173`
+
+## Default Ports
+
+- **Backend**: `8003`
+- **Frontend**: `5173` (Vite may pick another free port if 5173 is already in use)
 
 ## How to Use the App
 
@@ -195,12 +225,14 @@ Personal-Finance-Tracker/
 **Backend Issues:**
 - Ensure Python 3.8+ is installed
 - Check that all dependencies are installed: `pip install -r requirements.txt`
-- Verify JWT_SECRET environment variable is set
+- If auth tokens are invalid after restart, set `JWT_SECRET` to a fixed value (otherwise the default secret will be used)
+- If you see a port error like `address already in use`, stop the other process using port `8003` or change the port in `backend/main.py`
 
 **Frontend Issues:**
 - Ensure Node.js 16+ is installed
-- Clear node_modules and reinstall: `rm -rf node_modules && npm install`
-- Check that backend is running on port 8000
+- Reinstall deps if needed: delete `frontend/node_modules` and run `npm install`
+- Check that backend is running on `http://localhost:8003`
+- If Vite uses a different port (e.g. 5174), the backend CORS list in `backend/main.py` must include that port
 
 **Database Issues:**
 - SQLite database file is created automatically
