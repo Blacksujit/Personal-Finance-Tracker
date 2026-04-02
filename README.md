@@ -5,10 +5,19 @@ A full-stack personal finance tracking application with React frontend and FastA
 
 # Video Demo :
 
+> ⚠️ Note: GitHub may disable direct `<video>` playback in README previews for security/sanitization reasons. Use the link below to open the video in your browser.
+
+- [Open demo video](./video-demo/20260402-0928-59.7778076.mp4)
+- [Download demo video](./video-demo/20260402-0928-59.7778076.mp4)
+
+If you want inline playback locally (not on GitHub.com), keep this block in your local markdown viewer:
+
+```html
 <video controls>
-  <source src="20260402-0928-59.7778076.mp4" type="video/mp4">
+  <source src="./video-demo/20260402-0928-59.7778076.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+```
 
 ## Tech Stack
 
