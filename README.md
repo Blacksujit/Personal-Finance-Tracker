@@ -7,8 +7,8 @@ A full-stack personal finance tracking application with React frontend and FastA
 
 > ⚠️ Note: GitHub may disable direct `<video>` playback in README previews for security/sanitization reasons. Use the link below to open the video in your browser.
 
-- [Open demo video](./video-demo/20260402-0928-59.7778076.mp4)
-- [Download demo video](./video-demo/20260402-0928-59.7778076.mp4)
+- [Open demo video](./video-demo/Recording%202026-04-02%20153948.mp4)
+- [Download demo video](./video-demo/Recording%202026-04-02%20153948.mp4)
 
 If you want inline playback locally (not on GitHub.com), keep this block in your local markdown viewer:
 <!-- 
