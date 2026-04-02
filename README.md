@@ -2,6 +2,11 @@
 
 A full-stack personal finance tracking application with React frontend and FastAPI backend.
 
+
+# Video Demo :
+
+<video controls src="20260402-0928-59.7778076.mp4" title="Title"></video>
+
 ## Tech Stack
 
 **Frontend:**
