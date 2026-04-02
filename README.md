@@ -3,7 +3,7 @@
 A full-stack personal finance tracking application with React frontend and FastAPI backend.
 
 
-# Video Demo :
+## Video Demo :
 
 > ⚠️ Note: GitHub may disable direct `<video>` playback in README previews for security/sanitization reasons. Use the link below to open the video in your browser.
 
