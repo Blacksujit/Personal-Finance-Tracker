@@ -5,7 +5,10 @@ A full-stack personal finance tracking application with React frontend and FastA
 
 # Video Demo :
 
-<iframe width="560" height="315" src="20260402-0928-59.7778076.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<video controls>
+  <source src="20260402-0928-59.7778076.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Tech Stack
 
