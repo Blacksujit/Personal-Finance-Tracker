@@ -11,13 +11,13 @@ A full-stack personal finance tracking application with React frontend and FastA
 - [Download demo video](./video-demo/20260402-0928-59.7778076.mp4)
 
 If you want inline playback locally (not on GitHub.com), keep this block in your local markdown viewer:
-
+<!-- 
 ```html
 <video controls>
   <source src="./video-demo/20260402-0928-59.7778076.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-```
+``` -->
 
 ## Tech Stack
 
